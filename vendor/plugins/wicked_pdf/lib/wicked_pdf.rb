@@ -9,13 +9,13 @@ require 'wicked_pdf_railtie'
 require 'wicked_pdf_tempfile'
 
 class WickedPdf
-  if Platform.is_windows?
-   include Win32PdfRenderer
-  elsif Platform.is_linux?
-   include NixPdfRenderer
-  else
-   raise "Unable to find Platform"
-  end
+#   if Platform.is_windows?
+#    include Win32PdfRenderer
+#   elsif Platform.is_linux?
+#    include NixPdfRenderer
+#   else
+#    raise "Unable to find Platform"
+#   end
   @@config = {}
   cattr_accessor :config
 
